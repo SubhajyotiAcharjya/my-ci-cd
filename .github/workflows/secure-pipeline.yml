@@ -1,0 +1,13 @@
+name: Secure Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello Step
+        run: echo "Pipeline is running"
