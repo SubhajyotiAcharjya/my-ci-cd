@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello Step
-        run: echo "Pipeline is running"
+      - name: Use Secret
+        env:
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: echo "Using secure secret"
